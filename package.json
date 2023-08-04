@@ -9,7 +9,7 @@
         "url": "https://github.com/sebat2004/osu-rmp-extension"
     },
     "scripts": {
-        "start": "xt-build -e dev -w",
+        "start": "xt-build -e prod",
         "start:firefox": "xt-build -e dev -p firefox -w",
         "build": "xt-build -e prod",
         "build:firefox": "xt-build -e prod -p firefox",
