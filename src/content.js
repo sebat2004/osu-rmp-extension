@@ -1,34 +1,34 @@
-ratings = require('@mtucourses/rate-my-professors').default;
-
 MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
 // Called with any change to DOM
 var observer = new MutationObserver(function(mutations, observer) {
     const instructorDiv = document.querySelector("div.instructor-detail");
-    mutations.forEach(function(mutation) {
-        if (mutation.target.className !== "instructor-detail" && instructorDiv) {
-            let instructorId = getInstructorId(instructorDiv.innerHTML);
-            let rating = getInstructorRating(instructorId);
-            instructorDiv.innerHTML = instructorDiv.innerHTML + "<br>" + rating;
-            console.log("Rating change successful")
-        }
-    });
+    let changedDiv = false;
+    if (instructorDiv && !changedDiv) {
+        changedDiv = true;
+        const instructorName = instructorDiv.innerHTML;
+        getInstructorRating(instructorName).then((response) => {
+            if (response && !instructorDiv.innerHTML.includes("<br>")) {
+                instructorDiv.innerHTML = instructorDiv.innerHTML + "<br>" + response.ratingStats.avgRating;
+                console.log("Rating change successful")
+            } else {
+                console.log("Rating change unsuccessful");
+            }
+        });
+    }
 });
 
 observer.observe(document, {
     subtree: true,
     attributes: true,
-    childList: true
+    childList: false
 });
 
-const getInstructorId = async (instructorName) => {
-    let instructorId = await ratings.searchTeacher(instructorName);
-    console.log(instructorId);
-    return instructorId;
-}
-
-const getInstructorRating = async (instructorId) => {
-    let rating = await ratings.getRating(instructorId);
-    console.log(rating);
+const getInstructorRating = async (instructorName) => {
+    const rating = await chrome.runtime.sendMessage({
+        instructorName: instructorName,
+    }).then((rating) => {
+        return rating;
+    });
     return rating;
 }

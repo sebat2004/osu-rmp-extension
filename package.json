@@ -3,7 +3,7 @@
     "description": "Displays the reviews for Oregon State University professors from Rate My Professors on the OSU class registration page.",
     "version": "0.0.1",
     "homepage": "http://chrome.google.com/webstore",
-    "author": "ENTER YOUR NAME HERE",
+    "author": "Sebastian Torresola",
     "repository": {
         "type": "git",
         "url": "ENTER GIT REPO URL"
@@ -41,9 +41,16 @@
     "xtbuild": {
         "js_bundles": [
             {
+                "name": "content",
+                "src": "./src/content.js"
+            },
+            {
                 "name": "background",
-                "src": "./src/**/*.js"
+                "src": "./src/background.js"
             }
         ]
+    },
+    "dependencies": {
+        "@mtucourses/rate-my-professors": "^2.2.1"
     }
 }
