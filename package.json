@@ -1,12 +1,12 @@
 {
-    "name": "osu-rmp-extension",
+    "name": "OSU Rate My Professors Extension",
     "description": "Displays the reviews for Oregon State University professors from Rate My Professors on the OSU class registration page.",
     "version": "0.0.1",
     "homepage": "http://chrome.google.com/webstore",
     "author": "Sebastian Torresola",
     "repository": {
         "type": "git",
-        "url": "ENTER GIT REPO URL"
+        "url": "https://github.com/sebat2004/osu-rmp-extension"
     },
     "scripts": {
         "start": "xt-build -e dev -w",
