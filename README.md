@@ -1,4 +1,4 @@
-# OSU Rate My Professors Extension
+<h1 align=center>OSU Rate My Professors Extension</h1>
 
 ## What does it do?
 
