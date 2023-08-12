@@ -1,14 +1,17 @@
+import { getInstructorRating } from "../utils.js";
+
 MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
 // Callback function executes with any change to DOM
-var observer = new MutationObserver(function(mutations) {
+var observer = new MutationObserver(function(mutations){
     const instructorDiv = document.querySelector("div.instructor-detail");
     let changedDiv = false;
     mutations.forEach(function(mutation) {
         if (instructorDiv && !changedDiv) {
             changedDiv = true;
             const instructorName = instructorDiv.innerHTML;
-            getInstructorRating(instructorName).then((response) => {
+            getInstructorRating(instructorName, "Oregon State University").then((response) => {
+                console.log(response)
                 // Prevents multiple ratings from being added
                 if (response.ratingStats && !instructorDiv.innerHTML.includes("</a>")) {
                     instructorDiv.innerHTML = `${instructorName} <a target="_blank" rel="noopener noreferrer" style='text-decoration:none;' href='https://www.ratemyprofessors.com/professor/${response.ratingStats.legacyId}'>(Link to RMP page)</a>` + `<div style='display:flex;gap:3px;'><h5 style='color:blue;font-weight:500;'>Rate My Professors Rating: </h5><h5>${response.ratingStats.avgRating}/5</h5></div>`;
@@ -25,13 +28,3 @@ observer.observe(document, {
     subtree: true,
     attributes: true
 });
-
-// Communicates with background.js to get instructor rating from Rate My Professors
-const getInstructorRating = async (instructorName) => {
-    const rating = await chrome.runtime.sendMessage({
-        instructorName: instructorName,
-    }).then((rating) => {
-        return rating;
-    });
-    return rating;
-}
