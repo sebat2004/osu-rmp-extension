@@ -2,26 +2,31 @@
     "name": "__MSG_appName__",
     "short_name": "__MSG_appShortName__",
     "description": "__MSG_appDescription__",
-    "homepage_url": "http://chrome.google.com/webstore",
-    "version": "0.0.1",
-    "version_name": "0.0.1",
+    "homepage_url": "https://chrome.google.com/webstore/detail/osu-rate-my-professor-ext/hgfogfefocfabnfjmjijfcjogeghmocn",
+    "version": "0.0.3",
+    "version_name": "0.0.3",
     "manifest_version": 3,
     "default_locale": "en",
     "minimum_chrome_version": "88",
     "icons": {
         "128": "assets/img/128x128.png"
     },
-    "content_scripts": [
-        {
-            "matches": ["https://classes.oregonstate.edu/*"],
-            "js": ["content.js"]
-        }
-    ],
     "background": {
         "service_worker": "background.js",
         "type": "module"
     },
+    "content_scripts": [
+        {
+        "matches": ["https://classes.oregonstate.edu/*"],
+        "js": ["OregonSU.js"]
+        },
+        {
+        "matches": ["https://courses.students.ubc.ca/cs/courseschedule*"],
+        "js": ["UBC.js"]
+        }
+    ],
     "host_permissions": ["https://www.ratemyprofessors.com/*"],
+    "permissions": ["scripting", "tabs", "activeTab"],
     "action": {
         "default_icon": {
             "16": "assets/img/16x16.png",
