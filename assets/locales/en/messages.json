@@ -1,11 +1,11 @@
 {
     "appName": {
-        "message": "OSU Rate My Professor Extension"
+        "message": "Rate My Professor Extension"
     },
     "appShortName": {
-        "message": "OSU RMP Extension"
+        "message": "RMP Extension"
     },
     "appDescription": {
-        "message": "Displays the reviews for Oregon State University professors from Rate My Professors on the OSU class registration page."
+        "message": "Displays the reviews for professors from Rate My Professors on the class registration page."
     }
 }

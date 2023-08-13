@@ -26,7 +26,6 @@
         }
     ],
     "host_permissions": ["https://www.ratemyprofessors.com/*"],
-    "permissions": ["scripting", "tabs", "activeTab"],
     "action": {
         "default_icon": {
             "16": "assets/img/16x16.png",
