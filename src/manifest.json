@@ -3,8 +3,8 @@
     "short_name": "__MSG_appShortName__",
     "description": "__MSG_appDescription__",
     "homepage_url": "https://chrome.google.com/webstore/detail/osu-rate-my-professor-ext/hgfogfefocfabnfjmjijfcjogeghmocn",
-    "version": "0.0.3",
-    "version_name": "0.0.3",
+    "version": "0.0.4",
+    "version_name": "0.0.4",
     "manifest_version": 3,
     "default_locale": "en",
     "minimum_chrome_version": "88",
@@ -23,7 +23,11 @@
         {
         "matches": ["https://courses.students.ubc.ca/cs/courseschedule*"],
         "js": ["UBC.js"]
-        }
+        },
+        {
+            "matches": ["https://courses.illinois.edu/*"],
+            "js": ["UIUC.js"]
+        }    
     ],
     "host_permissions": ["https://www.ratemyprofessors.com/*"],
     "action": {
