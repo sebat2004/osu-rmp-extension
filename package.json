@@ -1,7 +1,7 @@
 {
     "name": "Rate My Professors Extension",
     "description": "Displays the reviews for professors from Rate My Professors on class registration pages.",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "homepage": "https://chrome.google.com/webstore/detail/osu-rate-my-professor-ext/hgfogfefocfabnfjmjijfcjogeghmocn",
     "author": "Sebastian Torresola",
     "repository": {
@@ -9,7 +9,7 @@
         "url": "https://github.com/sebat2004/osu-rmp-extension"
     },
     "scripts": {
-        "start": "xt-build -e prod",
+        "start": "xt-build -e dev -w",
         "start:firefox": "xt-build -e dev -p firefox -w",
         "build": "xt-build -e prod",
         "build:firefox": "xt-build -e prod -p firefox",
@@ -53,8 +53,8 @@
                 "src": "./src/scripts/UBC.js"
             },
             {
-                "name": "utils",
-                "src": "./src/utils.js"
+                "name": "UIUC",
+                "src": "./src/scripts/UIUC.js"
             }
         ]
     },
