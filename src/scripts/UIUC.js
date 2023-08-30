@@ -7,16 +7,14 @@ let instructorNames = new Map()
 for (const instructorRow of document.querySelectorAll("td.instructor")) {
     let instructorDiv = instructorRow.firstElementChild
     let newDiv = document.createElement("div")
-
     let sibling = instructorDiv.firstChild
     while (sibling) {
         if (sibling.nodeName !== "#text") {
             sibling = sibling.nextSibling
             continue
         }
-        let instructorName = sibling.nodeValue
-        
 
+        let instructorName = sibling.nodeValue
         if (!instructorNames.has(sibling)) {
             getInstructorRating(sibling.nodeValue, "University Of Illinois at Urbana").then((response) => {
                 if (response.ratingStats) {

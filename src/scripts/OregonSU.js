@@ -11,7 +11,6 @@ var observer = new MutationObserver(function(mutations){
             changedDiv = true;
             const instructorName = instructorDiv.innerHTML;
             getInstructorRating(instructorName, "Oregon State University").then((response) => {
-                console.log(response)
                 // Prevents multiple ratings from being added
                 if (response.ratingStats && !instructorDiv.innerHTML.includes("</a>")) {
                     instructorDiv.innerHTML = `${instructorName} <a target="_blank" rel="noopener noreferrer" style='text-decoration:none;' href='https://www.ratemyprofessors.com/professor/${response.ratingStats.legacyId}'>(Link to RMP page)</a>` + `<div style='display:flex;gap:3px;'><h5 style='color:blue;font-weight:500;'>Rate My Professors Rating: </h5><h5>${response.ratingStats.avgRating}/5</h5></div>`;

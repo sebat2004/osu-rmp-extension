@@ -55,6 +55,10 @@
             {
                 "name": "UIUC",
                 "src": "./src/scripts/UIUC.js"
+            },
+            {
+                "name": "OhioSU",
+                "src": "./src/scripts/OhioSU.js"
             }
         ]
     },

@@ -27,7 +27,11 @@
         {
             "matches": ["https://courses.illinois.edu/*"],
             "js": ["UIUC.js"]
-        }    
+        },
+        {
+            "matches": ["https://classes.osu.edu/class-search/*"],
+            "js": ["OhioSU.js"]
+        }
     ],
     "host_permissions": ["https://www.ratemyprofessors.com/*"],
     "action": {
