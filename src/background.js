@@ -1,11 +1,8 @@
 const ratings = require('@mtucourses/rate-my-professors').default;
 
-// // Gets school id from school name
-// ratings.searchSchool(request.schoolName).then((schools) => {
-//     if (schools.length === 0) {
-//         sendResponse({ratingStats: null});
-//         return;
-//     }
+// Gets school id from school name
+// ratings.searchSchool('University of California: Los Angeles').then((schools) => {
+//     console.log(schools[0].id)
 // });
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {

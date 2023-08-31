@@ -16,7 +16,7 @@ for (const instructorRow of document.querySelectorAll("td.instructor")) {
 
         let instructorName = sibling.nodeValue
         if (!instructorNames.has(sibling)) {
-            getInstructorRating(sibling.nodeValue, "University Of Illinois at Urbana", "U2Nob29sLTExMTI=").then((response) => {
+            getInstructorRating(sibling.nodeValue, "U2Nob29sLTExMTI=").then((response) => {
                 if (response.ratingStats && response.ratingStats.avgRating !== 0) {
                     instructorNames.set(sibling, response.ratingStats)
                     newDiv.innerHTML += `<div style='display:flex;gap:4px;'><a target="_blank" rel="noopener noreferrer" style='display:flex;' href='https://www.ratemyprofessors.com/professor/${response.ratingStats.legacyId}'>${instructorName}</a><h7 style='padding-left:8px;color:blue;font-weight:500;'>Rating:</h7><h7>${response.ratingStats.avgRating}/5</h7></div>`
@@ -33,4 +33,4 @@ for (const instructorRow of document.querySelectorAll("td.instructor")) {
         };
         sibling = sibling.nextSibling
     }
-}  
+} 

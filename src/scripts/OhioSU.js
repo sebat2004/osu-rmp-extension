@@ -9,7 +9,7 @@ setTimeout(() => {
         // Trims middle name if it exists
         instructorName = trimMiddleName(instructorName)
                 
-        await getInstructorRating(instructorName, "The Ohio State University", "U2Nob29sLTcyNA==").then((response) => {
+        await getInstructorRating(instructorName, "U2Nob29sLTcyNA==").then((response) => {
             if (response.ratingStats && response.ratingStats.avgRating !== 0) {
                 instructorDiv.innerHTML = `<div style='display:flex;gap:4px;'><a target="_blank" rel="noopener noreferrer" style='display:flex;' href='https://www.ratemyprofessors.com/professor/${response.ratingStats.legacyId}'>${instructorName}</a><h7 style='padding-left:8px;color:blue;font-weight:500;'>Rating:</h7><h7>${response.ratingStats.avgRating}/5</h7></div>`
             } else {

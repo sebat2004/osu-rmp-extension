@@ -11,7 +11,7 @@ for (const a of document.querySelectorAll("a")) {
     }
 }
 
-getInstructorRating(instructorName, "University of British Columbia", "U2Nob29sLTE0MTM=").then((response) => {
+getInstructorRating(instructorName, "U2Nob29sLTE0MTM=").then((response) => {
     if (response.ratingStats && response.ratingStats.avgRating !== 0 && !instructorDiv.innerHTML.includes("RMP")) {
         instructorDiv.innerHTML += `<a target="_blank" rel="noopener noreferrer" style='padding-left:5px;text-decoration:none;' href='https://www.ratemyprofessors.com/professor/${response.ratingStats.legacyId}'>(Link to RMP page)</a>` + `<div style='display:flex;gap:3px;'><h5 style='color:blue;font-weight:500;'>RMP Rating: </h5><h5>${response.ratingStats.avgRating}/5</h5></div>`;
     } else if (!instructorDiv.innerHTML.includes("RMP")) {
