@@ -1,8 +1,8 @@
-<h1 align=center>OSU Rate My Professors Extension</h1>
+<h1 align=center>Rate My Professors Extension</h1>
 
 ## What does it do?
 
-This extension seamlessly displays professor ratings from Rate My Professors under their names on Oregon State University's class registration page. We cut down the time you spend looking up professors by directly providing the average review rating on the class registration page and a direct link to the professor's Rate My Professors page.
+This extension seamlessly displays professor ratings from Rate My Professors under their names on the class registration pages for several universities. We cut down the time you spend looking up professors by directly providing the average review rating on the class registration page and a direct link to the professor's Rate My Professors page.
 
 ### Example:
 
