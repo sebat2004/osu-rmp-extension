@@ -59,6 +59,10 @@
             {
                 "name": "OhioSU",
                 "src": "./src/scripts/OhioSU.js"
+            },
+            {
+                "name": "BC",
+                "src": "./src/scripts/BC.js"
             }
         ]
     },
