@@ -63,6 +63,10 @@
             {
                 "name": "BC",
                 "src": "./src/scripts/BC.js"
+            },
+            {
+                "name": "BU",
+                "src": "./src/scripts/BU.js"
             }
         ]
     },

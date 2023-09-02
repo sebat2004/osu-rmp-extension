@@ -35,6 +35,10 @@
         {
             "matches": ["https://services.bc.edu/*"],
             "js": ["BC.js"]
+        },
+        {
+            "matches": ["https://www.bu.edu/phpbin/course-search/section/*"],
+            "js": ["BU.js"]
         }
     ],
     "host_permissions": ["https://www.ratemyprofessors.com/*"],

@@ -12,7 +12,7 @@ export const getInstructorRating = async (instructorName, schoolId) => {
 // Trims middle name from full name
 export const trimMiddleName = (fullName) => {
     const nameArray = fullName.split(" ");
-    if (nameArray.length === 3) {
+    if (nameArray.length >= 3) {
         return `${nameArray[0]} ${nameArray[2]}`;
     } else {
         return fullName;
