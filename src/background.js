@@ -1,9 +1,9 @@
 const ratings = require('@mtucourses/rate-my-professors').default;
 
-// Gets school id from school name
-ratings.searchSchool('University of Texas at Austin').then((schools) => {
-    console.log(schools)
-});
+// // Gets school id from school name
+// ratings.searchSchool('University of Texas at Austin').then((schools) => {
+//     console.log(schools)
+// });
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         // Gets teacher id from teacher name and school id
