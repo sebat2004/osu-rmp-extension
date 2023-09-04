@@ -39,6 +39,10 @@
         {
             "matches": ["https://www.bu.edu/phpbin/course-search/section/*"],
             "js": ["BU.js"]
+        },
+        {
+            "matches": ["https://utdirect.utexas.edu/apps/registrar/course_schedul*"],
+            "js": ["UTA.js"]
         }
     ],
     "host_permissions": ["https://www.ratemyprofessors.com/*"],

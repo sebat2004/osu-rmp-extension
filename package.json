@@ -67,6 +67,10 @@
             {
                 "name": "BU",
                 "src": "./src/scripts/BU.js"
+            },
+            {
+                "name": "UTA",
+                "src": "./src/scripts/UTA.js"
             }
         ]
     },
