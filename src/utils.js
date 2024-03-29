@@ -1,6 +1,7 @@
 // Communicates with background.js to get instructor rating from Rate My Professors
 export const getInstructorRating = async (instructorName, schoolId) => {
     const rating = await chrome.runtime.sendMessage({
+        action: "getRating",
         instructorName: instructorName,
         schoolId: schoolId
     }).then((rating) => {

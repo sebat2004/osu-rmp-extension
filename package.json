@@ -28,7 +28,8 @@
         "test/**/*"
     ],
     "devDependencies": {
-        "extension-cli": "latest"
+        "@types/chrome": "^0.0.263",
+        "extension-cli": "^1.2.2"
     },
     "xtdocs": {
         "source": {
@@ -41,40 +42,57 @@
     "xtbuild": {
         "js_bundles": [
             {
+                "name": "getRating",
+                "src": "./src/scripts/background/getRating.js"
+            },
+            {
+                "name": "analytics",
+                "src": "./src/scripts/analytics/analytics.js"
+            },
+            {
+                "name": "pageViewEvent",
+                "src": "./src/scripts/analytics/pageViewEvent.js"
+            },
+            {
+                "name": "rmpClickedEvent",
+                "src": "./src/scripts/analytics/rmpClickedEvent.js"
+            },
+            {
                 "name": "background",
                 "src": "./src/background.js"
             },
             {
                 "name": "OregonSU",
-                "src": "./src/scripts/OregonSU.js"
+                "src": "./src/scripts/content/OregonSU.js"
             },
             {
                 "name": "UBC",
-                "src": "./src/scripts/UBC.js"
+                "src": "./src/scripts/content/UBC.js"
             },
             {
                 "name": "UIUC",
-                "src": "./src/scripts/UIUC.js"
+                "src": "./src/scripts/content/UIUC.js"
             },
             {
                 "name": "OhioSU",
-                "src": "./src/scripts/OhioSU.js"
+                "src": "./src/scripts/content/OhioSU.js"
             },
             {
                 "name": "BC",
-                "src": "./src/scripts/BC.js"
+                "src": "./src/scripts/content/BC.js"
             },
             {
                 "name": "BU",
-                "src": "./src/scripts/BU.js"
+                "src": "./src/scripts/content/BU.js"
             },
             {
                 "name": "UTA",
-                "src": "./src/scripts/UTA.js"
+                "src": "./src/scripts/content/UTA.js"
             }
         ]
     },
     "dependencies": {
-        "@mtucourses/rate-my-professors": "^2.2.1"
+        "@mtucourses/rate-my-professors": "^2.2.1",
+        "dotenv": "^16.4.5"
     }
 }
