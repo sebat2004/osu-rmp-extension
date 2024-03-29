@@ -1,4 +1,4 @@
-import { getInstructorRating, keepFirstTwoWords } from "../utils.js";
+import { getInstructorRating, keepFirstTwoWords } from "../../utils.js";
 
 const professors = document.querySelectorAll("td")
 

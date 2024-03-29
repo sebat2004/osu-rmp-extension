@@ -1,4 +1,4 @@
-import { getInstructorRating } from "../utils";
+import { getInstructorRating } from "../../utils";
 
 const professors = document.querySelectorAll("tr.first-row td:nth-child(3)")
 

@@ -1,4 +1,4 @@
-import { getInstructorRating } from "../utils.js";
+import { getInstructorRating } from "../../utils.js";
 
 MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 

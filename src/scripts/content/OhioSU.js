@@ -1,4 +1,4 @@
-import { getInstructorRating, trimMiddleName} from '../utils'
+import { getInstructorRating, trimMiddleName} from '../../utils'
 
 // Instructor div: li.right ng-binding ng-scope
 setTimeout(() => {

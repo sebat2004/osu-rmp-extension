@@ -1,4 +1,4 @@
-import { getInstructorRating } from "../utils.js";
+import { getInstructorRating } from "../../utils.js";
 
 // Map of instructor names to their rating stats, to reduce API calls
 let instructorNames = new Map()

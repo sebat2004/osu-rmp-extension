@@ -1,4 +1,4 @@
-import { getInstructorRating } from "../utils.js";
+import { getInstructorRating } from "../../utils.js";
 
 let instructorDiv;
 let instructorName;

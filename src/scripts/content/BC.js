@@ -1,4 +1,4 @@
-import { getInstructorRating, keepFirstTwoWords } from "../utils";
+import { getInstructorRating, keepFirstTwoWords } from "../../utils";
 
 const instructors = document.querySelectorAll("span.instructors")
 
